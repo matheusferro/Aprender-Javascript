@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //usando o indexOf ele conta quantos elementos sao iguais ao passado no ().
+        //se nao achar nenhum ele retorna -1.
+        function temHabilidade(skills) {  
+            if(skills.indexOf("Javascript") > -1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        console.log(temHabilidade(skills));
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT DOM</title>
+</head>
+<body>
+    <div id='app'>
+        
+        <button class="botao">Adicionar elementos na lista</button>
+        <ul id='lista'>
+                <li>Adagoberto</li>
+            </ul>
+    </div>
+
+    <script>
+        var nomes = ["Diego", "Matheus", "Jão"];
+        var btn = document.querySelector('button.botao');
+        btn.onclick = function(){
+            var lista = document.querySelector('#lista');
+            for(var nome of nomes){
+                var node = document.createElement('LI'), texto = document.createTextNode(nome);
+                node.appendChild(texto);
+                lista.appendChild(node);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT DOM</title>
+</head>
+<body>
+    <div id='app'>
+        <button class="botao">Adicionar quadrado</button>
+    </div>
+
+    <script>
+        var btn = document.querySelector('button.botao'), container = document.querySelector('#app');
+        
+        btn.onclick = function(){
+            var box = document.createElement('div');
+            box.setAttribute("class","box");
+            box.setAttribute("onmouseover","mudaCor(this)");
+            box.style.width = 100;
+            box.style.height = 100;
+            box.style.marginTop = 5;
+            box.style.backgroundColor = 'Black';
+            container.appendChild(box);
+            console.log('a');
+            
+        }
+        function mudaCor(quadrado){
+            quadrado.style.backgroundColor = getRandomColor();
+        }
+        
+        function getRandomColor() {  
+            var letters = "0123456789ABCDEF";  
+            var color = "#";  
+            for (var i = 0; i < 6; i++) {    
+                color += letters[Math.floor(Math.random() * 16)];  
+            }  
+            return color;
+        }
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT DOM</title>
+</head>
+<body>
+    <div id='app'>
+        <button class="botao">Adicionar quadrado</button>
+
+    </div>
+
+    <script>
+        var btn = document.querySelector('button.botao'), container = document.querySelector('#app');
+        
+        btn.onclick = function(){
+            var box = document.createElement('div');
+            box.setAttribute("class","bd");
+            box.style.width = 100;
+            box.style.height = 100;
+            box.style.marginTop = 5;
+            box.style.backgroundColor = 'Black';
+            container.appendChild(box);
+            
+        }
+    </script>
+</body>
+</html>

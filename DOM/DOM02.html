@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT DOM</title>
+</head>
+<body>
+    <div id='app'> 
+        <input type="text" class="input" name="nome" id="id" placeholder="Digite algo">
+        <input type="text" class="input" name="nome" id="id2" placeholder="Digite algo">
+        <input type="text" class="input" name="nome" id="id2" placeholder="Digite algo">
+
+        <button class="botao">Botão</button>
+        
+    </div>
+
+    <script>
+        var InputElementId = document.getElementById('id'),
+        InputElementName = document.getElementsByTagName('nome'),
+        InputElementClasse = document.getElementsByClassName('input');
+        console.log(InputElementId, InputElementName, InputElementClasse);
+
+        //outra forma para achar elementos na DOM
+        var InputQueryUnico = document.querySelector('div#app input'),
+        InputQueryTodos = document.querySelectorAll('div#app input');
+        console.log(InputQueryUnico, InputQueryTodos);
+
+        //Ações com o DOM
+        var btnAlerta = document.querySelector('button.botao'),
+            input = document.querySelector('div#app input');
+        btnAlerta.onclick = function(){
+            var alerta = input.value;
+            alert("Ação realizada. " +alerta);
+        }
+    </script>
+</body>
+</html>

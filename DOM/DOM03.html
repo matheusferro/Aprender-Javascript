@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT DOM</title>
+</head>
+<body>
+    <div id='app'>
+        <input type="text" class="input" name="nome" id="id" placeholder="Digite algo">
+        
+        <button class="botaoAdd">Adicionar input</button>
+        <button class="botaoRemove">Remover input</button>
+        
+    </div>
+
+    <script>
+        //adicionando um link ao site na div app
+        var link = document.createElement('a'), texto = document.createTextNode('Acessar GOOGLE');
+        link.setAttribute('href', 'http:\\www.google.com.br');
+        link.setAttribute('title', 'titulo');
+        link.appendChild(texto);
+
+        var container = document.querySelector('#app');
+        container.appendChild(link);
+        //removendo o input quando houver um click
+        var btnExclui = document.querySelector('button.botaoRemove');
+        var btnAdiciona = document.querySelector('button.botaoAdd')
+        var input = document.querySelector('div#app input');
+        
+        btnExclui.onclick = function(){
+            container.removeChild(input);
+        };
+        btnAdiciona.onclick = function(){
+            container.appendChild(input);
+        }
+    </script>
+</body>
+</html>

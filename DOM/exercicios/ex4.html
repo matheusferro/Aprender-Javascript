@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JAVASCRIPT DOM</title>
+</head>
+<body>
+    <div id='app'>
+        
+        
+        <ul id='lista'>
+            <li>Adagoberto</li>
+        </ul>
+        <input type="text" id="nome">
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+        var btn = document.querySelector('button.botao');
+       
+        btn.onclick = function(){
+            var lista = document.querySelector('#lista');
+            var node = document.createElement('LI'), texto = document.createTextNode(document.querySelector("#app input").value);
+            node.appendChild(texto);
+            lista.appendChild(node);
+            
+        }
+    </script>
+</body>
+</html>
